@@ -13,13 +13,11 @@ if [ ! -d $build_folder ]; then
   exit 1
 fi
 
-cd ..
-cd Lessen
-cd Voorwoord           ; cp *.* $build_folder; mv $build_folder/README.md $build_folder/README_00.md; cd ..
-cd 3_servo_motor       ; cp *.* $build_folder; mv $build_folder/README.md $build_folder/README_01.md; cd ..
-cd 3_meer_servo_motoren; cp *.* $build_folder; mv $build_folder/README.md $build_folder/README_02.md; cd ..
-cd 4_FSR_met_servo     ; cp *.* $build_folder; mv $build_folder/README.md $build_folder/README_03.md; cd ..
-cd 6_muziek_tone       ; cp *.* $build_folder; mv $build_folder/README.md $build_folder/README_04.md; cd ..
+cp ../hoofdstukken/Voorwoord/*.* $build_folder           ; mv $build_folder/README.md $build_folder/README_00.md
+cp ../hoofdstukken/3_servo_motor/*.* $build_folder       ; mv $build_folder/README.md $build_folder/README_01.md
+cp ../hoofdstukken/3_meer_servo_motoren/*.* $build_folder; mv $build_folder/README.md $build_folder/README_02.md
+cp ../hoofdstukken/4_FSR_met_servo/*.* $build_folder     ; mv $build_folder/README.md $build_folder/README_03.md
+cp ../hoofdstukken/6_muziek_tone/*.* $build_folder       ; mv $build_folder/README.md $build_folder/README_04.md
 
 cd $build_folder
 
@@ -32,9 +30,9 @@ cat README_04.md >> README.md; echo " " >> README.md; echo "\pagebreak" >> READM
 # Thinner margin
 pandoc README.md -o boek.pdf --toc --toc-depth=1 --highlight-style=tango -V geometry:margin=0.5in
 
-cp boek.pdf ../../Boek/Boek_actuatoren_laag_zonder_voorpagina.pdf
+cp boek.pdf ../../boeken/Boek_actuatoren_laag_zonder_voorpagina.pdf
 
-cd ../../Boek
+cd ../../boeken
 
 pdfunite VoorpaginaActuatorenLaag.pdf Boek_actuatoren_laag_zonder_voorpagina.pdf Boek_actuatoren_laag.pdf
 
