@@ -2,9 +2,7 @@
 
 # Concatenate all Markdown files first, convert those to one PDF
 
-my_script_path=`realpath $0`
-my_folder_path=`dirname $my_script_path`
-build_folder=$my_folder_path/build
+build_folder=build
 #echo $build_folder
 
 rm -rf build

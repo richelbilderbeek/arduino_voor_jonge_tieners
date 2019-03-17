@@ -2,14 +2,7 @@
 
 # Concatenate all Markdown files first, convert those to one PDF
 
-# Krijg je
-#   line 5: realpath: command not found
-# Doe dan: 
-#   sudo apt-get install realpath
-my_script_path=`realpath $0`
-
-my_folder_path=`dirname $my_script_path`
-build_folder=$my_folder_path/build
+build_folder=build
 #echo $build_folder
 
 rm -rf build
@@ -20,15 +13,15 @@ if [ ! -d $build_folder ]; then
   exit 1
 fi
 
-cd ..
-cd Lessen
-cd Voorpagina
-pandoc VoorpaginaLed.md -o ../../Boek/VoorpaginaLed.pdf
-pandoc VoorpaginaSensor.md -o ../../Boek/VoorpaginaSensor.pdf
-pandoc VoorpaginaActuatorenLaag.md -o ../../Boek/VoorpaginaActuatorenLaag.pdf
-pandoc VoorpaginaActuatorenHoog.md -o ../../Boek/VoorpaginaActuatorenHoog.pdf
-pandoc VoorpaginaMuziek.md -o ../../Boek/VoorpaginaMuziek.pdf
-pandoc VoorpaginaNeoPixel.md -o ../../Boek/VoorpaginaNeoPixel.pdf
-pandoc VoorpaginaTheremin.md -o ../../Boek/VoorpaginaTheremin.pdf
+cp ../hoofdstukken/Voorpagina/*.* $build_folder
+cd $build_folder
+
+pandoc VoorpaginaLed.md -o ../../boeken/VoorpaginaLed.pdf
+pandoc VoorpaginaSensor.md -o ../../boeken/VoorpaginaSensor.pdf
+pandoc VoorpaginaActuatorenLaag.md -o ../../boeken/VoorpaginaActuatorenLaag.pdf
+pandoc VoorpaginaActuatorenHoog.md -o ../../boeken/VoorpaginaActuatorenHoog.pdf
+pandoc VoorpaginaMuziek.md -o ../../boeken/VoorpaginaMuziek.pdf
+pandoc VoorpaginaNeoPixel.md -o ../../boeken/VoorpaginaNeoPixel.pdf
+pandoc VoorpaginaTheremin.md -o ../../boeken/VoorpaginaTheremin.pdf
 
 
