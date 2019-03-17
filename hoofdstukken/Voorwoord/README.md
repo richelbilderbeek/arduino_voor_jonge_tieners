@@ -11,7 +11,7 @@ Dit boek heeft een CC-BY-NC-SA licensie.
 
 ![De licensie van dit boek](CC-BY-NC-SA.png)
 
-(C) Richèl Bilderbeek en alle docenten en alle leerlingen, 2016
+(C) Richèl Bilderbeek en alle docenten en alle leerlingen
 
 Met dit boekje mag je alles doen wat je wilt, als je maar verwijst naar
 de oorsprongelijke versie op deze website:

@@ -9,7 +9,7 @@ In de map '[boeken](boeken/README.md)'.
 Jazeker:
 
  * Appingedam, maandagavond (in de maak)
- * [Groningen, donderdagavond](https://github.com/richelbilderbeek/Dojo)
+ * [Groningen, donderdagavond](https://github.com/richelbilderbeek/ArduinoCourse)
 
 ## Wat is de licensie op de boeken?
 
@@ -29,7 +29,7 @@ SA|Share alike|Het materiaal moet met dezelfde licensie verspreidt worden
 Het copyright van deze boeken staat op:
 
 ```
-(C) Richèl Bilderbeek en alle docenten en alle leerlingen, 2016
+(C) Richèl Bilderbeek en alle docenten en alle leerlingen
 ```
 
 Dit zijn veel mensen, waardoor dit boekje altijd gratis, vrij en open zal blijven.
