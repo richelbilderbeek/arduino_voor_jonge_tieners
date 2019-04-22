@@ -14,7 +14,7 @@ if [ ! -d $build_folder ]; then
 fi
 
 cp ../hoofdstukken/Voorwoord/*.* $build_folder             ; mv $build_folder/README.md $build_folder/README_00.md
-cp ../hoofdstukken/1a_Blink/*.* $build_folder              ; mv $build_folder/README.md $build_folder/README_01.md
+cp ../hoofdstukken/1_Blink/*.* $build_folder               ; mv $build_folder/README.md $build_folder/README_01.md
 cp ../hoofdstukken/1b_BlinkBlinkBlink/*.* $build_folder    ; mv $build_folder/README.md $build_folder/README_02.md
 cp ../hoofdstukken/1c_MeerKleurFadeMetFor/*.* $build_folder; mv $build_folder/README.md $build_folder/README_03.md
 cp ../hoofdstukken/1d_ForNogEenKeer/*.* $build_folder      ; mv $build_folder/README.md $build_folder/README_04.md
@@ -36,10 +36,10 @@ pandoc README.md -o boek.pdf --toc --toc-depth=1 --highlight-style=tango -V geom
 cp boek.pdf ../../boeken/Boek_led_zonder_voorpagina.pdf
 
 cd ../../boeken
-pdfunite VoorpaginaLed.pdf Boek_led_zonder_voorpagina.pdf Boek_led.pdf
+pdfunite VoorpaginaLed.pdf Boek_led_zonder_voorpagina.pdf Boek_1_led.pdf
 
 # Make booklet
-bookletimposer -a Boek_led.pdf -o Boekje_led.pdf
+bookletimposer -a Boek_1_led.pdf -o Boekje_1_led.pdf
 
 # Cleanup
 rm Boek_led_zonder_voorpagina.pdf

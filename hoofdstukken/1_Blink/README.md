@@ -1,16 +1,16 @@
-# Les 1a: Blink
+# Les 1: Blink
 
 In deze les gaan we de allergemakkelijkste schakeling maken die er is: Blink!
 
-## Een Arduino aansluiten
+## Blink: een Arduino aansluiten
 
 Sluit een Arduino zo aan:
 
-![Blink zonder led](1a_blink_zonder_led.png)
+![Blink zonder led](1_blink_zonder_led.png)
 
 Je zult wel een USB kabel in de Arduino en in een laptop moeten doen
 
-## Opdracht 1
+## Blink: opdracht 1
 
 Sluit de Arduino aan.
 
@@ -19,7 +19,7 @@ Sluit de Arduino aan.
 
 \pagebreak
 
-## De Arduino IDE opstarten
+## Blink: de Arduino IDE opstarten
 
 Om een Arduino te programmeren hebben we een programma nodig.
 Dit programma noemen we 'de Arduino IDE' (IDE spreek je uit
@@ -28,7 +28,7 @@ als 'ie-dee-ee')
 De Arduino IDE staat op alle laptops van de cursus.
 Hier zie je het logo van de Arduino IDE:
 
-![Logo van de Arduino IDE](1a_blink_ide_logo.png)
+![Logo van de Arduino IDE](1_blink_ide_logo.png)
 
 Je kunt de Arduino IDE ook starten, door:
 
@@ -37,14 +37,14 @@ Je kunt de Arduino IDE ook starten, door:
 
 Als het goed is, zie je de Arduino IDE:
 
-![De Arduino IDE](1a_blink_ide.png)
+![De Arduino IDE](1_blink_ide.png)
 
 ![Sunglasses](EmojiSunglasses.png) | IDE betekent 'Integrated Development Environment', het programma waarmee je programmeert.
 :-------------:|:----------------------------------------: 
 
 \pagebreak
 
-## Ons eerste programma
+## Blink: ons eerste programma
 
 Dit is (een versie van) de code van `Blink`:
 
@@ -73,16 +73,16 @@ void loop()
 
 Type de code over in de Arduino IDE en klik op `Upload`.
 
-![Hier kun je op `Upload` klikken](1a_blink_upload.png)
+![Hier kun je op `Upload` klikken](1_blink_upload.png)
 
-## Opdracht 2
+## Blink: opdracht 2
 
 Laat het LEDje 10x zo snel knipperen. 
 Hint: het LEDje is nu 1000 milliseconden aan en 1000 milliseconden uit.
 
 \pagebreak
 
-## Oplossing 2
+## Blink: oplossing 2
 
 ```c++
 void setup() 
@@ -115,13 +115,13 @@ void loop()
 :-------------:|:----------------------------------------: 
 `digitalWrite(13, LOW);`|'Lieve computer, zet geen spanning op pin 13.'
 
-## Opdracht 3
+## Blink: opdracht 3
 
 Laat het LEDje zo snel als kan knipperen. Wat zie je?
 
 \pagebreak
 
-## Oplossing 3
+## Blink: oplossing 3
 
 Er zijn meer oplossingen, dit is er een:
 
@@ -150,11 +150,11 @@ Je ziet het lampje niet meer knipperen.
 
 \pagebreak
 
-## Blink
+## Blink: LED aansluiten
 
 Nu is het tijd Blink aan te sluiten:
 
-![Blink](1a_blink.png)
+![Blink](1_blink.png)
 
  * Haal het USB snoer uit de computer, zodat de Arduino geen spanning meer heeft
  * Sluit Blink aan zoals op de tekening
@@ -164,23 +164,23 @@ Nu is het tijd Blink aan te sluiten:
 ![Bowtie](EmojiBowtie.png) | Als het LEDje niet brandt, draai deze dan om.
 :-------------:|:----------------------------------------: 
 
-## Opdracht 4
+## Blink: opdracht 4
 
 Sluit je LEDje nu aan op pin 12.
 
 \pagebreak
 
-## Oplossing 4
+## Blink: oplossing 4
 
-![Blink met LEDje op pin 12](1a_blink_op_12.png)
+![Blink met LEDje op pin 12](1_blink_op_12.png)
 
-## Opdracht 5
+## Blink: opdracht 5
 
 Zorg nu dat het LEDje op pin 12 gaat knipperen op de seconde.
 
 \pagebreak
 
-## Oplossing 5
+## Blink: oplossing 5
 
 ```c++
 void setup() 
@@ -197,13 +197,9 @@ void loop()
 }
 ```
 
-## Eindopdracht
+## Blink: eindopdracht
 
 Sluit de LED aan op pin 11 en laat deze 2 keer per seconde knipperen.
 
 ![Sunglasses](EmojiSunglasses.png) | Gelukt? Laat dit zien aan een volwassene voor een sticker!
 :-------------:|:----------------------------------------: 
-
-## Extra
-
- * Bas On Tech video: [https://youtu.be/KgMocAMAJvg](https://youtu.be/KgMocAMAJvg)
