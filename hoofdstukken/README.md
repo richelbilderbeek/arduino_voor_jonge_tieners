@@ -1,8 +1,8 @@
-# Lessen
+# Hoofdstukken
 
-Arduino lessen die je zo kunt doen.
+De losse hoofdstukken van de boeken.
 
-### 1. LED
+## 1. LED en knop
 
 ![Led](Led.png)
 
@@ -11,14 +11,14 @@ Arduino lessen die je zo kunt doen.
  * [Les 3: Knop if else](3_knop_if_else/README.md) + Serial 
  * [Les 4: Knop flip](4_knop_flip/README.md)
 
-### LEDs
+## 2. LEDs
 
  * [Les 5: Blink 6](5_blink_6/README.md) 
  * [Les 6: Knop kiest LED](6_knop_kiest/README.md)
  * [Les 7: Potmeter kiest LED](7_potmeter_kiest/README.md)
  * [Les 8: LDR kiest LED](8_ldr_kiest/README.md)
 
-### RGB LEDs
+## 3. RGB LEDs
 
 ![LDR](Ldr.png)
 
@@ -27,7 +27,7 @@ Arduino lessen die je zo kunt doen.
  * [Les 11: FSR RGB](11_fsr_rgb/README.md) 
  * [Les 12: LDR RGB](12_ldr_rgb/README.md) 
 
-### 3. Actuator, laag vermogen
+## 4. Actuator, laag vermogen
 
 ![Servo motor](ServoMotor.png)
 
