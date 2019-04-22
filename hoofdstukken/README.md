@@ -6,37 +6,35 @@ Arduino lessen die je zo kunt doen.
 
 ![Led](Led.png)
 
- * [Les 1a: Blink](1a_Blink/README.md)
- * [Les 1b: Blink Blink Blink](1b_BlinkBlinkBlink/README.md)
- * [Les 1c: Meer Kleur, Fade Met For](1c_MeerKleurFadeMetFor/README.md)
- * [Les 1d: For Nog Een Keer](1d_ForNogEenKeer/README.md) 
+ * [Les 1: Blink](1_blink/README.md)
+ * [Les 2: Blink Blink Blink](2_blink_blink_blink/README.md)
+ * [Les 3: Knop if else](3_knop_if_else/README.md) + Serial 
+ * [Les 4: Knop flip](4_knop_flip/README.md)
 
-### 2. Sensor
+### LEDs
+
+ * [Les 5: Blink 6](5_blink_6/README.md) 
+ * [Les 6: Knop kiest LED](6_knop_kiest/README.md)
+ * [Les 7: Potmeter kiest LED](7_potmeter_kiest/README.md)
+ * [Les 8: LDR kiest LED](8_ldr_kiest/README.md)
+
+### RGB LEDs
 
 ![LDR](Ldr.png)
 
- * [Les 2: Knop if else](2_Knop_if_else/README.md) 
- * [Les 4: FSR](4_FSR/README.md) 
- * [Les 9: LDR](9_LDR/README.md) 
- * ([Potmeter](Potmeter/README.md))
+ * [Les 9: RGB LED](9_rgb/README.md)
+ * [Les 10: Potmeter RGB](10_potmeter_rgb/README.md)
+ * [Les 11: FSR RGB](11_fsr_rgb/README.md) 
+ * [Les 12: LDR RGB](12_ldr_rgb/README.md) 
 
 ### 3. Actuator, laag vermogen
 
 ![Servo motor](ServoMotor.png)
 
- * [Servo besturen met seriele monitor](ServoSerial/README.md)
- * [Les 3a: Servo motor](3_servo_motor/README.md)
- * [Les 3b: Meer servo motoren](3_servo_motoren/README.md)
- * [Les 4: FSR met servo](4_FSR_met_servo/README.md)
- * [Les 6: Muziek tone](6_muziek_tone/README.md)
-
-### 4. Actuator, hoger vermogen
-
-![DC Motor](DcMotor.png)
-
- * [Les 5: DC motor met transistor](5_dc_motor_met_transistor/README.md)
- * [Les 7: Relais](7_dc_motor_met_relais/README.md)
- * [Les 8: Infrarood sensor obstakel ontwijkend object](8_infrarood_sensor_obstakel_ontwijkend_object/README.md)
+ * [Les 13: Servo met seriele monitor](13_servo_serial/README.md)
+ * [Les 14: Servo met potmeter](14_servo_potmeter/README.md)
+ * [Les 15: FSR met servo](15_FSR_met_servo/README.md)
+ * [Les 16: Servo's](16_servos/README.md)
 
 ## 5. Muziek
 
@@ -84,29 +82,30 @@ Arduino lessen die je zo kunt doen.
  * [NeoPixels 1: blink op een LEDje](NeoPixel1/README.md)
  * [NeoPixels 2: ?regenboog op alle LEDjes](NeoPixel2/README.md)
 
-### 11. Besturing op afstand
+### Actuator, hoger vermogen
 
- * ?
+![DC Motor](DcMotor.png)
 
-### 12. Internet of Things
-
- * ?
+ * [DC motor met transistor](dc_motor_met_transistor/README.md)
+ * [DC motor met relais](dc_motor_met_relais/README.md)
+ * [Obstakel ontwijkend object](obstakel_ontwijkend_object/README.md)
 
 ## Dingen
 
- * [Les 0: Broodplank](0_Breadboard/README.md)
- * [Blink snelheid](BlinkSnelheid/README.md)
- * Chatroom
- * Kleurensensor
- * Ultrasone afstandssensor
- * Druksensor
- * Reedcontact
  * Alcohol sensor
- * Pulsgever
- * Stappenmotor
+ * [Arduino en Processing](Arduino_en_processing/README.md)
+ * [Breadboard](breadboard/README.md)
+ * [Blink snelheid](BlinkSnelheid/README.md)
+ * [Chatroom](chatroom/README.md)
+ * Druksensor
+ * Kleurensensor
  * Laser
  * Nokia5110
- * [Arduino en Processing](Arduino_en_processing/README.md)
+ * Pulsgever
+ * Reedcontact
+ * Stappenmotor
+ * [tone](tone/README.md)
+ * Ultrasone afstandssensor
 
 ## Lesvormen
 
