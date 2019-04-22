@@ -6,23 +6,23 @@ De losse hoofdstukken van de boeken.
 
 ![Led](Led.png)
 
- * [Les 1: Blink](1_blink/README.md)
- * [Les 2: Blink Blink Blink](2_blink_blink_blink/README.md)
- * [Les 3: Knop if else](3_knop_if_else/README.md) + Serial 
- * [Les 4: Knop flip](4_knop_flip/README.md)
+ * [Les 1: Blink](01_blink/README.md)
+ * [Les 2: Blink Blink Blink](02_blink_blink_blink/README.md)
+ * [Les 3: Knop if else](03_knop_if_else/README.md) + Serial 
+ * [Les 4: Knop flip](04_knop_flip/README.md)
 
 ## 2. LEDs
 
- * [Les 5: Blink 6](5_blink_6/README.md) 
- * [Les 6: Knop kiest LED](6_knop_kiest/README.md)
- * [Les 7: Potmeter kiest LED](7_potmeter_kiest/README.md)
- * [Les 8: LDR kiest LED](8_ldr_kiest/README.md)
+ * [Les 5: Blink 6](05_blink_6/README.md) 
+ * [Les 6: Knop kiest LED](06_knop_kiest/README.md)
+ * [Les 7: Potmeter kiest LED](07_potmeter_kiest/README.md)
+ * [Les 8: LDR kiest LED](08_ldr_kiest/README.md)
 
 ## 3. RGB LEDs
 
 ![LDR](Ldr.png)
 
- * [Les 9: RGB LED](9_rgb/README.md)
+ * [Les 9: RGB LED](09_rgb/README.md)
  * [Les 10: Potmeter RGB](10_potmeter_rgb/README.md)
  * [Les 11: FSR RGB](11_fsr_rgb/README.md) 
  * [Les 12: LDR RGB](12_ldr_rgb/README.md) 
