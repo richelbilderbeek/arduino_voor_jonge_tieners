@@ -8,12 +8,10 @@ In de map '[boeken](boeken/README.md)'.
 
 Jazeker:
 
- * Appingedam, maandagavond (in de maak)
- * [Groningen, donderdagavond](https://github.com/richelbilderbeek/ArduinoCourse)
+ * [Appingedam, maandagavond](https://github.com/richelbilderbeek/damster_dojo)
+ * [Groningen, vrijdagavond](https://github.com/richelbilderbeek/ArduinoCourse)
 
 ## Wat is de licensie op de boeken?
-
-# Voorwoord
 
 De boeken hebben allemaal een [CC-BY-NC-SA](https://nl.wikipedia.org/wiki/Creative_Commons-licenties) licensie:
 

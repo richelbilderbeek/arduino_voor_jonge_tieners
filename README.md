@@ -4,7 +4,7 @@ Branch|[![Travis CI logo](TravisCI.png)](https://travis-ci.org)
 ---|---
 `master`|[![Build Status](https://travis-ci.org/richelbilderbeek/arduino_voor_jonge_tieners.svg?branch=master)](https://travis-ci.org/richelbilderbeek/arduino_voor_jonge_tieners)
 
-Cursus 'Arduino voor jonge tieners'.
+Cursus 'Arduino voor jonge tieners'. 
 
  * [boeken](boeken/README.md): download hier de boeken op A4 of A5 formaat
  * [hoofdstukken](hoofdstukken/README.md): dit zijn de losse hoofdstukken
