@@ -25,10 +25,10 @@ script:
   - sudo apt-get install coreutils pandoc poppler-utils fragmaster texlive-fonts-recommended bookletimposer
   - cd scripts
   - ./maak_boek_voorpaginas
-  - ./maak_boek_1_led
-  - ./maak_boek_2_sensor
-  - ./maak_boek_3_actuatoren_laag
-  - ./maak_boek_4_actuatoren_hoog
-  - ./maak_boek_5_muziek
-  - ./maak_boek_6_theremin
-  - ./maak_boek_neopixel
+  - ./maak_boek_1_led_en_knop
+  #- ./maak_boek_2_sensor
+  #- ./maak_boek_3_actuatoren_laag
+  #- ./maak_boek_4_actuatoren_hoog
+  #- ./maak_boek_5_muziek
+  #- ./maak_boek_6_theremin
+  #- ./maak_boek_neopixel
