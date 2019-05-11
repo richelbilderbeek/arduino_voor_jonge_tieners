@@ -1,4 +1,4 @@
-# 3. Knop if ... else
+# Les 3: Knop if ... else
 
 In deze les laten we de Arduino vragen aan zichzelf stellen.
 
@@ -20,39 +20,40 @@ Hier is code om het lampje aan te laten gaan,
 als de knop wordt ingedrukt:
 
 ```c++
+const int pin_led = 13;
+const int pin_knop = 2;
+
 void setup() 
 {
-  pinMode(13, OUTPUT);
-  pinMode( 2, INPUT );
+  pinMode(pin_led, OUTPUT);
+  pinMode(pin_knop, INPUT);
 }
 
 void loop()
 {
-  digitalWrite(13, digitalRead(2));
+  digitalWrite(pin_led, digitalRead(pin_knop));
 }
 ```
 
-![Computer](EmojiComputer.png)    | ![Smiley](EmojiSmiley.png)
-:--------------------------------:|:----------------------------------------: 
-`digitalRead(2)`                  |'Lieve computer, geef mij HIGH als er op pin 2 spanning staat. Geef anders LOW'
-`digitalWrite(13, digitalRead(2))`|'Zet op pin 13 spanning als er op pin 2 spanning staat'
+![Computer](EmojiComputer.png)                | ![Smiley](EmojiSmiley.png)
+:--------------------------------------------:|:----------------------------------------: 
+`digitalRead(pin_knop)`                       |'Geef mij HIGH als er op `pin_knop` spanning staat. Geef anders LOW'
+`digitalWrite(pin_led, digitalRead(pin_knop))`|'Zet op `pin_led` spanning als er op `pin_knop` spanning staat'
 
 ![](EmojiBowtie.png) | De 'Pull Down' weerstand zorgt dat pin 2 verbonden is met GND als de knop niet ingedrukt is
 :-------------:|:----------------------------------------: 
 
 ## 3.3. Knop if ... else: Vragen
 
- * 1. Als je de knop indrukt, gaat de lamp dan uit of aan?
- * 2. Er is een regel `pinMode( 2, INPUT )`. Waarom staat er een spatie voor de `2`? Mag die spatie weg?
+Als je de knop indrukt, gaat de LED dan uit of aan?
 
 \pagebreak
 
 ## 3.4. Knop if ... else: Antwoorden
 
- * 1. De knop gaat dan aan
- * 2. Er staat een spatie, omdat dit mooier eruit ziet met de regel erboven. De spatie mag weg. 
+De LED gaat dan aan
 
-![](EmojiSunglasses.png) | Goede programmeurs werken netjes
+![](EmojiSunglasses.png) | De LED gaat dan aan
 :-------------:|:----------------------------------------: 
 
 ## 3.5. Knop if ... else: `if`
@@ -60,22 +61,24 @@ void loop()
 Met `if` kun je de Arduino iets laten doen, als iets zo is:
 
 ```c++
-if (digitalRead(4) == HIGH)
+if (digitalRead(pin_knop) == HIGH)
 {
-  digitalWrite(5, HIGH);
+  digitalWrite(pin_led_rood, HIGH);
 }
 else
 {
-  digitalWrite(6, LOW);
+  digitalWrite(pin_led_groen, LOW);
 }
 ```
 
-In deze code wordt gekeken of op pin 4 spanning staat. Zo ja, dan zet de Arduino
-spanning op pin 5. Anders (`else`) haalt de Arduino de spanning van pin 6 af.
+In deze code wordt gekeken of op `pin_knop` spanning staat. 
+Zo ja, dan zet de Arduino
+spanning op `pin_led_rood`. 
+Anders (`else`) haalt de Arduino de spanning van `pin_led_groen` af.
 
 ![Computer](EmojiComputer.png)  | ![Smiley](EmojiSmiley.png)
 :------------------------------:|:----------------------------------------: 
-`if (digitalRead(4) == HIGH) {}`|'Lieve computer, als er spanning op pin 4 staat, doe dan hetgeen tussen accolades'
+`if (digitalRead(pin_knop) == HIGH) {}`|'Lieve computer, als er spanning op `pin_knop` staat, doe dan dat tussen accolades'
 
 ![](EmojiSunglasses.png) | De `=` kun je uitspreken als 'zet op'. De `==` kun je uitspreken als 'is gelijk aan'
 :-------------:|:----------------------------------------: 
@@ -83,6 +86,8 @@ spanning op pin 5. Anders (`else`) haalt de Arduino de spanning van pin 6 af.
 \pagebreak
 
 ## 3.6. Knop if ... else: Opdracht 1
+
+Dit is voorbeeld code, die niet helemaal af is:
 
 ```c++
 void setup() 
@@ -105,10 +110,11 @@ void loop()
 }
 ```
 
-Maak de code zo, dat:
+Maak de code af, zodat:
 
- * als je op de knop drukt, dat het lampje aan gaat 
- * als je op de knop niet indrukt, dat het lampje uit gaat
+ * als je op de knop drukt, het lampje aan gaat 
+ * als je op de knop niet indrukt, het lampje uit gaat
+ * gebruik variabelen om de pinnen een naam te geven
 
 ![](EmojiBowtie.png) | Na de ronde haken van `if` komt geen puntkomma
 :-------------:|:----------------------------------------: 
@@ -118,32 +124,37 @@ Maak de code zo, dat:
 ## 3.7. Knop if ... else: Oplossing 1
 
 ```c++
+// ...
+
 void setup() 
 {
-  pinMode(13, OUTPUT);
-  pinMode( 2, INPUT );
+  // ...
 }
 
 void loop()
 {
-  if (digitalRead(2) == HIGH)
+  if (digitalRead(pin_knop) == HIGH)
   {
-    digitalWrite(13, HIGH);
+    digitalWrite(pin_led, HIGH);
   }
   else
   {
-    digitalWrite(13, LOW);
+    digitalWrite(pin_led, LOW);
   }
 }
 ```
 
+![](EmojiSunglasses.png)| `// ...` betekent 'De code die je daar al hebt staan'
+:-------------:|:----------------------------------------: 
+
 ## 3.8. Knop if ... else: Opdracht 2
 
-Sluit een tweede LEDje aan. Maak de code zo, dat:
+Sluit een tweede, groen LEDje aan. Maak de code zo, dat:
 
  * als je op de knop drukt, dat het eerste lampje aan gaat en het tweede LEDje uit 
  * als je op de knop niet indrukt, dat het eerste lampje uit gaat en het tweede LEDje uit
-
+ * Noem de variabele voor de pin van de rode LED `pin_led_rood`, voor de
+   groene LED `pin_led_groen`
 
 ![](EmojiSunglasses.png)| Binnen de accolades van een `if` kun je meerdere regels typen. Net als tussen de accolades van `setup` en `loop`!
 :-------------:|:----------------------------------------: 
@@ -162,30 +173,37 @@ Figuur `Oplossing van 'Knop met twee LEDjes'` laat zien hoe je dit aan moet slui
 Dit is de code:
 
 ```c++
+const int pin_led_rood = 13;
+const int pin_led_groen = 12;
+// ...
+
 void setup() 
 {
-  pinMode(13, OUTPUT);
-  pinMode(12, OUTPUT);
-  pinMode( 2, INPUT );
+  pinMode(pin_led_rood, OUTPUT);
+  pinMode(pin_led_groen, OUTPUT);
+  // ...
 }
 
 void loop()
 {
-  if (digitalRead(2) == HIGH)
+  if (/* ... */)
   {
-    digitalWrite(12, LOW );
-    digitalWrite(13, HIGH);
+    digitalWrite(pin_led_groen, LOW);
+    digitalWrite(pin_led_rood, HIGH);
   }
   else
   {
-    digitalWrite(12, HIGH);
-    digitalWrite(13, LOW );
+    digitalWrite(pin_led_groen, HIGH);
+    digitalWrite(pin_led_rood, LOW);
   }
   delay(10);
 }
 ```
 
 \pagebreak
+
+![](EmojiBowtie.png)| `/* ... */` betekent ook 'De code die je daar al hebt staan'
+:-------------:|:----------------------------------------: 
 
 ## 3.10. Knop if ... else: Eindopdracht
 

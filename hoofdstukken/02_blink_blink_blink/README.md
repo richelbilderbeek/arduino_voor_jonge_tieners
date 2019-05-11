@@ -41,20 +41,19 @@ Sluit de LED aan op pin 12 en verander de code zodat deze gaat knipperen.
 
 ![Blink met LEDje op 12](02_blink_blink_blink_blink_op_12.png)
 
+Je hoeft maar een regel te veranderen:
+
 ```c++
 const int pin_led = 12;
 
 void setup() 
 {
-  pinMode(pin_led, OUTPUT);
+  // ...
 }
 
 void loop() 
 {
-  digitalWrite(pin_led, HIGH);
-  delay(1000);
-  digitalWrite(pin_led, LOW);
-  delay(1000);
+  // ...
 }
 ```
 
@@ -72,24 +71,24 @@ Gebruik `wachttijd` in de regels met `delay`.
 ## 2.5: Blink Blink Blink: Oplossing 2
 
 ```c++
-const int pin_led = 12;
+// ... [maak pin_led met waarde 12]
 const int wachttijd = 1000;
 
 void setup() 
 {
-  pinMode(pin_led, OUTPUT);
+  // ...
 }
 
 void loop() 
 {
-  digitalWrite(pin_led, HIGH);
+  // ... [zet spanning op pin_led]
   delay(wachttijd);
-  digitalWrite(pin_led, LOW);
+  // ... [geen spanning op pin_led af]
   delay(wachttijd);
 }
 ```
 
-![](EmojiSunglasses.png) | Programmeurs gebruiken veel variabelen, omdat de code dan beter te snappen is.
+![](EmojiBowtie.png)| `// ... [wat]` betekent 'De code die je daar al hebt staan die gaat over wat er tussen blokhaken staat'
 :-------------:|:----------------------------------------: 
 
 ## 2.6: Blink Blink Blink: Blink Blink Blink aansluiten
@@ -112,7 +111,7 @@ en zorg dat 'ie de juiste beginwaarde heeft.
 
 ```c++
 const int pin_led_1 = 11;
-const int wachttijd = 1000;
+// ... [onthoud wachttijd]
 
 void setup() 
 {
@@ -122,11 +121,14 @@ void setup()
 void loop() 
 {
   digitalWrite(pin_led_1, HIGH);
-  delay(wachttijd);
+  // [wacht wachttijd milliseconden]
   digitalWrite(pin_led_1, LOW);
-  delay(wachttijd);
+  // [wacht wachttijd milliseconden]
 }
 ```
+
+![](EmojiSunglasses.png) | Programmeurs gebruiken veel variabelen, omdat de code dan beter te snappen is.
+:-------------:|:----------------------------------------: 
 
 ## 2.8: Blink Blink Blink: Opdracht 4
 
@@ -149,7 +151,7 @@ Laat dan eerst het eerste LEDje aan en uit gaan, laat dan het tweede LEDje aan e
 ```c++
 const int pin_led_1 = 11;
 const int pin_led_2 = 10;
-const int wachttijd = 1000;
+// ...
 
 void setup() 
 {
@@ -160,13 +162,13 @@ void setup()
 void loop() 
 {
   digitalWrite(pin_led_1, HIGH);
-  delay(wachttijd);
+  // ... [wacht wachttijd milliseconden]
   digitalWrite(pin_led_1, LOW);
-  delay(wachttijd);
+  // ... [wacht wachttijd milliseconden]
   digitalWrite(pin_led_2, HIGH);
-  delay(wachttijd);
+  // ... [wacht wachttijd milliseconden]
   digitalWrite(pin_led_2, LOW);
-  delay(wachttijd);
+  // ... [wacht wachttijd milliseconden]
 }
 ```
 
@@ -185,27 +187,23 @@ Maak een derde variabele `pin_led_3`. Laat nu steeds alle lampjes tegelijk knipp
 ## 2.11: Blink Blink Blink: Oplossing 5
 
 ```c++
-const int pin_led_1 = 11;
-const int pin_led_2 = 10;
+// ... [maak wachttijd, pin_led_1 en pin_led_2]
 const int pin_led_3 = 9;
-const int wachttijd = 1000;
 
 void setup() 
 {
-  pinMode(pin_led_1, OUTPUT);
-  pinMode(pin_led_2, OUTPUT);
+  // ... [pin_led_1 en pin_led_2 geven spanning]
+  pinMode(pin_led_3, OUTPUT);
 }
 
 void loop() 
 {
-  digitalWrite(pin_led_1, HIGH);
-  digitalWrite(pin_led_2, HIGH);
+  // ... [zet spanning op LED 1 en 2]
   digitalWrite(pin_led_3, HIGH);
-  delay(wachttijd);
-  digitalWrite(pin_led_1, LOW);
-  digitalWrite(pin_led_2, LOW);
+  // ... [wacht wachttijd milliseconden]
+  // ... [zet spanning op LED 1 en 2]
   digitalWrite(pin_led_3, LOW);
-  delay(wachttijd);
+  // ... [wacht wachttijd milliseconden]
 }
 ```
 

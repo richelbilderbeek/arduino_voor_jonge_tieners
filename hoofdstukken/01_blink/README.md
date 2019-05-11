@@ -92,9 +92,9 @@ Hint: het LEDje is nu 1000 milliseconden aan en 1000 milliseconden uit.
 ## 1.6 Blink: oplossing 2
 
 ```c++
-void setup() 
+void setup()
 {
-  pinMode(13, OUTPUT);
+  // ...
 }
 
 void loop() 
@@ -106,21 +106,20 @@ void loop()
 }
 ```
 
-![Computer](EmojiComputer.png) | ![Smiley](EmojiSmiley.png)
+![](EmojiSunglasses.png)| `// ...` betekent 'De code die je daar al hebt staan'
 :-------------:|:----------------------------------------: 
-`pinMode(13, OUTPUT);`|'Lieve computer, zorg dat er stroom uit pin 13 kan komen.'
 
 ![Computer](EmojiComputer.png) | ![Smiley](EmojiSmiley.png)
 :-------------:|:----------------------------------------: 
-`digitalWrite(13, HIGH);`|'Lieve computer, zet spanning op pin 13.'
+`pinMode(13, OUTPUT);`|'Zorg dat er spanning uit pin 13 kan komen'
 
 ![Computer](EmojiComputer.png) | ![Smiley](EmojiSmiley.png)
 :-------------:|:----------------------------------------: 
-`delay(1000);`|'Lieve computer, doe nu 1000 milliseconden niks.'
+`digitalWrite(13, HIGH);`|'Zet spanning op pin 13'
 
 ![Computer](EmojiComputer.png) | ![Smiley](EmojiSmiley.png)
 :-------------:|:----------------------------------------: 
-`digitalWrite(13, LOW);`|'Lieve computer, zet geen spanning op pin 13.'
+`delay(1000);`|'Wacht 1000 milliseconden'
 
 ## 1.7 Blink: opdracht 3
 
@@ -133,9 +132,9 @@ Laat het LEDje zo snel als kan knipperen. Wat zie je?
 Er zijn meer oplossingen, dit is er een:
 
 ```c++
-void setup() 
+void setup()
 {
-  pinMode(13, OUTPUT);
+  // ...
 }
 
 void loop() 
@@ -147,13 +146,23 @@ void loop()
 }
 ```
 
+Je ziet het lampje niet meer knipperen. 
+
+![](EmojiSunglasses.png) | Je ziet het lampje niet meer knipperen!
+:-------------:|:----------------------------------------: 
+
+
+![](EmojiBowtie.png) | Het lampje knippert wel, maar onze ogen kunnen niet snel genoeg kijken om het te zien.
+:-------------:|:----------------------------------------: 
+
+![Computer](EmojiComputer.png) | ![Smiley](EmojiSmiley.png)
+:-------------:|:----------------------------------------: 
+`digitalWrite(13, LOW);`|'Haal de spanning van pin 13 af'
+
 ![](EmojiBowtie.png) | Ook goed: `delay(0);` of de regels met `delay` helemaal weghalen.
 :-------------:|:----------------------------------------: 
 
-Je ziet het lampje niet meer knipperen. 
 
-![](EmojiSunglasses.png) | Het lampje knippert wel, maar onze ogen kunnen niet snel genoeg kijken om het te zien.
-:-------------:|:----------------------------------------: 
 
 \pagebreak
 

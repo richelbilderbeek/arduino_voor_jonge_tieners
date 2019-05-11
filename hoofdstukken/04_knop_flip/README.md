@@ -1,200 +1,304 @@
-# 2. Knop if ... else
+# Les 4: Knop flip
 
-## Aansluiten
+In deze les leren we een variabele te gebruiken.
 
-![Stroomschema](2_knop_if_else.png)
-
-![Sunglasses](EmojiSunglasses.png) | De weerstand aan de knop wordt een 'Pull Down' weerstand genoemd
+![](EmojiBowtie.png) | De les heet 'knop flip' omdat je met een flip-flop programmeert 
 :-------------:|:----------------------------------------: 
 
-![Bowtie](EmojiBowtie.png) | De 'Pull Down' weerstand zorgt dat pin 2 verbonden is met GND als de knop niet ingedrukt is
+## 4.1. Knop flip: Intro
+
+We beginnen met deze schakeling:
+
+![Stroomschema](04_knop_flip.png)
+
+![](EmojiSunglasses.png) | Hee, deze schakeling herken ik!
 :-------------:|:----------------------------------------: 
 
 \pagebreak
 
-## Code
-
-Hier is code om het lampje aan te laten gaan,
-als de knop wordt ingedrukt:
+En we gebruiken deze code:
 
 ```c++
+const int pin_led = 13;
+const int pin_knop = 2;
+
 void setup() 
 {
-  pinMode(13, OUTPUT);
-  pinMode( 2, INPUT );
+  pinMode(pin_led, OUTPUT);
+  pinMode(pin_knop, INPUT);
 }
 
 void loop()
 {
-  digitalWrite(13, digitalRead(2));
+  if (digitalRead(pin_knop) == HIGH)
+  {
+    digitalWrite(pin_led, HIGH);
+  }
+  else
+  {
+    digitalWrite(pin_led, LOW);
+  }
 }
 ```
 
-![Computer](EmojiComputer.png)    | ![Smiley](EmojiSmiley.png)
-:--------------------------------:|:----------------------------------------: 
-`digitalRead(2)`                  |'Lieve computer, geef mij HIGH als er op pin 2 spanning staat. Geef anders LOW'
-`digitalWrite(13, digitalRead(2))`|'Zet op pin 13 spanning als er op pin 2 spanning staat'
-
-## Vragen
-
- * 1. Als je de knop indrukt, gaat de lamp dan uit of aan?
- * 2. Er is een regel `pinMode( 2, INPUT )`. Waarom staat er een spatie voor de `2`? Mag die spatie weg?
-
-\pagebreak
-
-## Antwoorden
-
- * 1. De knop gaat dan aan
- * 2. Er staat een spatie, omdat dit mooier eruit ziet met de regel erboven. De spatie mag weg. 
-
-![Sunglasses](EmojiSunglasses.png) | Goede programmeurs werken netjes
+![](EmojiSunglasses.png) | Hee, deze code herken ik!
 :-------------:|:----------------------------------------: 
 
-## if
+## 4.2. Knop flip: Knop eeuwig aan: opdracht 1
 
-Met `if` kun je de Arduino iets laten doen, als iets zo is:
+Zet bovenaan de code, boven `setup`:
 
 ```c++
-if (digitalRead(4) == HIGH)
+boolean is_aan = false;
+```
+
+In het begin van `loop`, gebruik een `if` om te kijken of de knop is
+ingedrukt. Zo ja, zet `is_aan` op `true`:
+
+```c++
+if (/* de knop is ingedrukt */)
 {
-  digitalWrite(5, HIGH);
+  is_aan = true;
+}
+``` 
+
+Na de eerste `if` in `loop`, gebruik een `if` om te kijken of `is_aan`
+gelijk is aan `true`. Zo ja, zet zet de LED aan. Zo nee, zet de LED uit.
+
+```c++
+if (is_aan == true)
+{
+  //Zet de LED aan
 }
 else
 {
-  digitalWrite(6, LOW);
+  //Zet de LED uit
 }
 ```
 
-In deze code wordt gekeken of op pin 4 spanning staat. Zo ja, dan zet de Arduino
-spanning op pin 5. Anders (`else`) haalt de Arduino de spanning van pin 6 af.
-
-![Computer](EmojiComputer.png)  | ![Smiley](EmojiSmiley.png)
-:------------------------------:|:----------------------------------------: 
-`if (digitalRead(4) == HIGH) {}`|'Lieve computer, als er spanning op pin 4 staat, doe dan hetgeen tussen accolades'
-
-![Sunglasses](EmojiSunglasses.png) | De `=` kun je uitspreken als 'zet op'. De `==` kun je uitspreken als 'is gelijk aan'
-:-------------:|:----------------------------------------: 
+Wat zie je?
 
 \pagebreak
 
-## Opdracht 1
+## 4.3. Knop flip: Knop eeuwig aan: oplossing 2
+
 
 ```c++
+// ...
+boolean is_aan = false;
+
+// ...
+
+void loop()
+{
+  if (digitalRead(pin_knop) == HIGH)
+  {
+    is_aan = true;
+  }
+
+  if (is_aan == true)
+  {
+    digitalWrite(pin_led, HIGH);
+  }
+  else
+  {
+    digitalWrite(pin_led, LOW);
+  }
+}
+```
+
+Als je op de knop drukt, blijft de LED eeuwig aan.
+
+## 4.4. Knop flip: Knop eeuwig aan: opdracht 2
+
+We gaan nu zeggen:
+  
+ * Als je de knop indrukt, gaat de LED aan en blijft aan
+ * Als je de knop dan weer indrukt, gaat de LED uit en blijft uit
+ * Als je de knop dan weer indrukt, gaat de LED aan en blijft aan
+ * Enzovoorts
+
+Pas de `if` aan die kijkt of de knop is ingedrukt:
+
+```c++
+if (digitalRead(pin_knop) == HIGH)
+{
+  if (is_aan == true)
+  {
+    is_aan = false;
+  }
+  else
+  {
+    is_aan = true;
+  }
+}
+```
+
+Upload de code. Wat zie je? Als je iets raars ziet, klopt dat!
+
+![](EmojiBowtie.png) | Wat zie je?|![](EmojiSunglasses.png) | Als je iets raars ziet, klopt dat!
+:-------------:|:----------------:|:-------------:|:----------------------------------------: 
+
+
+\pagebreak
+
+## 4.5. Knop flip: Knop eeuwig aan: oplossing 2
+
+```c++
+// ...
+
+void loop()
+{
+  if (digitalRead(pin_knop) == HIGH)
+  {
+    if (is_aan == true)
+    {
+      is_aan = false;
+    }
+    else
+    {
+      is_aan = true;
+    }
+  }
+
+  // ...
+
+}
+```
+
+![](EmojiBowtie.png) | Als je de knop indrukt, dimt het LEDje. Laat je de knop los, dan blijft het LEDje of eeuwig aan of eeuwig uit
+:-------------:|:----------------------------------------: 
+
+![](EmojiSunglasses.png) | Dit komt omdat de Arduino snel en vaak het lampje aan en uit zet
+:-------------:|:----------------------------------------: 
+
+## 4.6. Knop flip: Knop eeuwig aan met fijne besturing: opdracht 2
+
+We gaan ervoor zorgen dat de knop beter reageert:
+als de knop ingedrukt wordt, laat de Arduino dan
+200 milliseconden wachten.
+
+\pagebreak
+
+## 4.7. Knop flip: Knop eeuwig aan met fijne besturing: oplossing 2
+
+In de `if` van als de knop wordt ingedrukt, voeg
+een `delay(200);` regel toe. Dit kan voor of na de `if` statements
+met `is_aan`.
+
+```c++
+// ...
+
+void loop()
+{
+  if (digitalRead(pin_knop) == HIGH)
+  {
+    // ... [if (is_aan == true) ...]
+
+    delay(200);
+
+    // ... [if (is_aan == true) ...]
+  }
+
+  // ...
+
+}
+```
+
+## 4.8. Knop flip: twee LEDs besturen: opdracht
+
+We gaan een tweede LED aansluiten. Door de knop in te drukken, kun je wisselen
+tussen leds.
+
+ * Sluit een tweede, groene LED aan op pin 12
+ * In de code, verander bovenaan:
+
+```c++
+// pin_led gaat weg
+const int pin_led_rood = /* pin nummer */;
+const int pin_led_groen = /* pin nummer */;
+// ... [pin_knop blijft hetzelfde]
+// is_aan gaat weg
+int welke_led_aan = 1;
+```
+
+ * In de code, in `setup`, zorg dat de twee LEDs en de knop worden gevonden.
+ * In de code, in `loop`, reageer anders op de knop:
+
+```c++
+if (/* de knop is ingedrukt */)
+{
+  welke_led_aan = welke_led_aan + 1;
+  if (welke_led_aan == 3)
+  {
+    welke_led_aan = 1;
+  }
+
+  // ... [wacht 200 milliseconden]
+}
+```
+
+ * In de code, in `loop`, reageer nu op `welke_led_aan`:
+
+```c++
+if (welke_led_aan == 1)
+{
+  // Zet rode LED aan, zet groene LED uit
+}
+if (welke_led_aan == 2)
+{
+  // Zet rode LED uit, zet groene LED aan
+}
+```
+
+\pagebreak
+
+## 4.9. Knop flip: twee LEDs besturen: oplossing
+
+![4.9 Knop flip: twee LEDs besturen: oplossing](04_knop_flip_2_zoom.png)
+
+
+```c++
+const int pin_led_rood = 13;
+const int pin_led_groen = 12;
+const int pin_knop = 2;
+int welke_led_aan = 1;
+
 void setup() 
 {
-  pinMode(4, INPUT );
-  pinMode(5, OUTPUT);
-  pinMode(6, OUTPUT);
+  pinMode(pin_led_rood, OUTPUT);
+  pinMode(pin_led_groen, OUTPUT);
+  pinMode(pin_knop, INPUT);
 }
 
 void loop()
 {
-  if (digitalRead(4) == HIGH)
+  if (/* de knop is ingedrukt */)
   {
-    digitalWrite(5, HIGH);
+    welke_led_aan = welke_led_aan + 1;
+    if (welke_led_aan == 3)
+    {
+      welke_led_aan = 1;
+    }
+
+    // ... [wacht 200 milliseconden]
   }
-  else
+  
+  if (welke_led_aan == 1)
   {
-    digitalWrite(6, LOW);
+    digitalWrite(pin_led_rood, HIGH);
+    digitalWrite(pin_led_groen, LOW);
   }
-}
-```
-
-Maak de code zo, dat:
-
- * als je op de knop drukt, dat het lampje aan gaat 
- * als je op de knop niet indrukt, dat het lampje uit gaat
-
-![Bowtie](EmojiBowtie.png) | Na de ronde haken van `if` komt geen puntkomma
-:-------------:|:----------------------------------------: 
-
-\pagebreak
-
-## Oplossing 1
-
-```c++
-void setup() 
-{
-  pinMode(13, OUTPUT);
-  pinMode( 2, INPUT );
-}
-
-void loop()
-{
-  if (digitalRead(2) == HIGH)
+  if (welke_led_aan == 2)
   {
-    digitalWrite(13, HIGH);
-  }
-  else
-  {
-    digitalWrite(13, LOW);
+    digitalWrite(pin_led_rood, LOW);
+    digitalWrite(pin_led_groen, HIGH);
   }
 }
 ```
 
-## Opdracht 2
+## 4.10. Knop flip: eindopdracht
 
-Sluit een tweede LEDje aan. Maak de code zo, dat:
+We gaan een derde LED aansluiten. Door de knop in te drukken, kun je wisselen
+van eerste, naar tweede, naar derde LED.
 
- * als je op de knop drukt, dat het eerste lampje aan gaat en het tweede LEDje uit 
- * als je op de knop niet indrukt, dat het eerste lampje uit gaat en het tweede LEDje uit
-
-
-![Sunglasses](EmojiSunglasses.png)| Binnen de accolades van een `if` kun je meerdere regels typen. Net als tussen de accolades van `setup` en `loop`!
-:-------------:|:----------------------------------------: 
-
-![Bowtie](EmojiBowtie.png) | Vergeet de `else` ('doe anders') niet!
-:-------------:|:----------------------------------------: 
-
-\pagebreak
-
-## Oplossing 2
-
-Figuur `Oplossing van 'Knop met twee LEDjes'` laat zien hoe je dit aan moet sluiten.
-
-![Oplossing van 'Knop met twee LEDjes'](2_knop_if_else_2.png)
-
-Dit is de code:
-
-```c++
-void setup() 
-{
-  pinMode(13, OUTPUT);
-  pinMode(12, OUTPUT);
-  pinMode( 2, INPUT );
-}
-
-void loop()
-{
-  if (digitalRead(2) == HIGH)
-  {
-    digitalWrite(12, LOW );
-    digitalWrite(13, HIGH);
-  }
-  else
-  {
-    digitalWrite(12, HIGH);
-    digitalWrite(13, LOW );
-  }
-  delay(10);
-}
-```
-
-\pagebreak
-
-## Eindopdracht
-
-Sluit een tweede knop aan. Maak de code zo, dat
-
- * als je op de eerste knop drukt, dat het eerste lampje aan gaat
- * als je de eerste knop niet indrukt, dat het eerste lampje uit gaat
- * als je op de tweede knop drukt, dat het tweede lampje uit gaat
- * als je de tweede knop niet indrukt, dat het tweede lampje aan gaat
-
-![Sunglasses](EmojiSunglasses.png)| Je kunt vaker `if` na elkaar zetten
-:-------------:|:----------------------------------------: 
-
-![Bowtie](EmojiBowtie.png) | Voor een tweede knop heb je een tweede weerstand van tienduizend Ohm nodig
-:-------------:|:----------------------------------------: 
-
-![Eindopdracht](2_knop_if_else_eindopdracht.png)
