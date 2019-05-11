@@ -13,11 +13,11 @@ if [ ! -d $build_folder ]; then
   exit 1
 fi
 
-cp ../hoofdstukken/Voorwoord/*.* $build_folder             ; mv $build_folder/README.md $build_folder/README_00.md
-cp ../hoofdstukken/1_Blink/*.* $build_folder               ; mv $build_folder/README.md $build_folder/README_01.md
-cp ../hoofdstukken/1b_BlinkBlinkBlink/*.* $build_folder    ; mv $build_folder/README.md $build_folder/README_02.md
-cp ../hoofdstukken/1c_MeerKleurFadeMetFor/*.* $build_folder; mv $build_folder/README.md $build_folder/README_03.md
-cp ../hoofdstukken/1d_ForNogEenKeer/*.* $build_folder      ; mv $build_folder/README.md $build_folder/README_04.md
+cp ../hoofdstukken/Voorwoord/*.* $build_folder           ; mv $build_folder/README.md $build_folder/README_00.md
+cp ../hoofdstukken/01_blink/*.* $build_folder            ; mv $build_folder/README.md $build_folder/README_01.md
+cp ../hoofdstukken/02_blink_blink_blink/*.* $build_folder; mv $build_folder/README.md $build_folder/README_02.md
+cp ../hoofdstukken/03_knop_if_else/*.* $build_folder     ; mv $build_folder/README.md $build_folder/README_03.md
+cp ../hoofdstukken/04_knop_flip/*.* $build_folder        ; mv $build_folder/README.md $build_folder/README_04.md
 
 cd $build_folder
 
@@ -33,14 +33,14 @@ cat README_04.md >> README.md; echo " " >> README.md; echo "\pagebreak" >> READM
 # Do not cut code blocks
 pandoc README.md -o boek.pdf --toc --toc-depth=1 --highlight-style=tango -V geometry:margin=0.5in
 
-cp boek.pdf ../../boeken/Boek_led_zonder_voorpagina.pdf
+cp boek.pdf ../../boeken/boek_led_zonder_voorpagina.pdf
 
 cd ../../boeken
-pdfunite VoorpaginaLed.pdf Boek_led_zonder_voorpagina.pdf Boek_1_led.pdf
+pdfunite voorpagina_1_led.pdf boek_led_zonder_voorpagina.pdf boek_1_led.pdf
 
 # Make booklet
-bookletimposer -a Boek_1_led.pdf -o Boekje_1_led.pdf
+bookletimposer -a boek_1_led.pdf -o boekje_1_led.pdf
 
 # Cleanup
-rm Boek_led_zonder_voorpagina.pdf
+rm boek_led_zonder_voorpagina.pdf
 
