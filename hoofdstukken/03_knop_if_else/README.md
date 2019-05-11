@@ -1,18 +1,20 @@
-# 2. Knop if ... else
+# 3. Knop if ... else
 
-## Aansluiten
+In deze les laten we de Arduino vragen aan zichzelf stellen.
 
-![Stroomschema](2_knop_if_else.png)
-
-![Sunglasses](EmojiSunglasses.png) | De weerstand aan de knop wordt een 'Pull Down' weerstand genoemd
+![](EmojiSunglasses.png) | De Arduino wordt dus een soort filosoof!
 :-------------:|:----------------------------------------: 
 
-![Bowtie](EmojiBowtie.png) | De 'Pull Down' weerstand zorgt dat pin 2 verbonden is met GND als de knop niet ingedrukt is
+## 3.1. Knop if ... else: Aansluiten
+
+![Stroomschema](3_knop_if_else.png)
+
+![](EmojiSunglasses.png) | De weerstand aan de knop wordt een 'Pull Down' weerstand genoemd
 :-------------:|:----------------------------------------: 
 
 \pagebreak
 
-## Code
+## 3.2. Knop if ... else: Code
 
 Hier is code om het lampje aan te laten gaan,
 als de knop wordt ingedrukt:
@@ -35,22 +37,25 @@ void loop()
 `digitalRead(2)`                  |'Lieve computer, geef mij HIGH als er op pin 2 spanning staat. Geef anders LOW'
 `digitalWrite(13, digitalRead(2))`|'Zet op pin 13 spanning als er op pin 2 spanning staat'
 
-## Vragen
+![](EmojiBowtie.png) | De 'Pull Down' weerstand zorgt dat pin 2 verbonden is met GND als de knop niet ingedrukt is
+:-------------:|:----------------------------------------: 
+
+## 3.3. Knop if ... else: Vragen
 
  * 1. Als je de knop indrukt, gaat de lamp dan uit of aan?
  * 2. Er is een regel `pinMode( 2, INPUT )`. Waarom staat er een spatie voor de `2`? Mag die spatie weg?
 
 \pagebreak
 
-## Antwoorden
+## 3.4. Knop if ... else: Antwoorden
 
  * 1. De knop gaat dan aan
  * 2. Er staat een spatie, omdat dit mooier eruit ziet met de regel erboven. De spatie mag weg. 
 
-![Sunglasses](EmojiSunglasses.png) | Goede programmeurs werken netjes
+![](EmojiSunglasses.png) | Goede programmeurs werken netjes
 :-------------:|:----------------------------------------: 
 
-## if
+## 3.5. Knop if ... else: `if`
 
 Met `if` kun je de Arduino iets laten doen, als iets zo is:
 
@@ -72,12 +77,12 @@ spanning op pin 5. Anders (`else`) haalt de Arduino de spanning van pin 6 af.
 :------------------------------:|:----------------------------------------: 
 `if (digitalRead(4) == HIGH) {}`|'Lieve computer, als er spanning op pin 4 staat, doe dan hetgeen tussen accolades'
 
-![Sunglasses](EmojiSunglasses.png) | De `=` kun je uitspreken als 'zet op'. De `==` kun je uitspreken als 'is gelijk aan'
+![](EmojiSunglasses.png) | De `=` kun je uitspreken als 'zet op'. De `==` kun je uitspreken als 'is gelijk aan'
 :-------------:|:----------------------------------------: 
 
 \pagebreak
 
-## Opdracht 1
+## 3.6. Knop if ... else: Opdracht 1
 
 ```c++
 void setup() 
@@ -105,12 +110,12 @@ Maak de code zo, dat:
  * als je op de knop drukt, dat het lampje aan gaat 
  * als je op de knop niet indrukt, dat het lampje uit gaat
 
-![Bowtie](EmojiBowtie.png) | Na de ronde haken van `if` komt geen puntkomma
+![](EmojiBowtie.png) | Na de ronde haken van `if` komt geen puntkomma
 :-------------:|:----------------------------------------: 
 
 \pagebreak
 
-## Oplossing 1
+## 3.7. Knop if ... else: Oplossing 1
 
 ```c++
 void setup() 
@@ -132,7 +137,7 @@ void loop()
 }
 ```
 
-## Opdracht 2
+## 3.8. Knop if ... else: Opdracht 2
 
 Sluit een tweede LEDje aan. Maak de code zo, dat:
 
@@ -140,19 +145,19 @@ Sluit een tweede LEDje aan. Maak de code zo, dat:
  * als je op de knop niet indrukt, dat het eerste lampje uit gaat en het tweede LEDje uit
 
 
-![Sunglasses](EmojiSunglasses.png)| Binnen de accolades van een `if` kun je meerdere regels typen. Net als tussen de accolades van `setup` en `loop`!
+![](EmojiSunglasses.png)| Binnen de accolades van een `if` kun je meerdere regels typen. Net als tussen de accolades van `setup` en `loop`!
 :-------------:|:----------------------------------------: 
 
-![Bowtie](EmojiBowtie.png) | Vergeet de `else` ('doe anders') niet!
+![](EmojiBowtie.png) | Vergeet de `else` ('doe anders') niet!
 :-------------:|:----------------------------------------: 
 
 \pagebreak
 
-## Oplossing 2
+## 3.9. Knop if ... else: Oplossing 2
 
 Figuur `Oplossing van 'Knop met twee LEDjes'` laat zien hoe je dit aan moet sluiten.
 
-![Oplossing van 'Knop met twee LEDjes'](2_knop_if_else_2.png)
+![Oplossing van 'Knop met twee LEDjes'](3_knop_if_else_2.png)
 
 Dit is de code:
 
@@ -182,7 +187,7 @@ void loop()
 
 \pagebreak
 
-## Eindopdracht
+## 3.10. Knop if ... else: Eindopdracht
 
 Sluit een tweede knop aan. Maak de code zo, dat
 
@@ -191,10 +196,10 @@ Sluit een tweede knop aan. Maak de code zo, dat
  * als je op de tweede knop drukt, dat het tweede lampje uit gaat
  * als je de tweede knop niet indrukt, dat het tweede lampje aan gaat
 
-![Sunglasses](EmojiSunglasses.png)| Je kunt vaker `if` na elkaar zetten
+![](EmojiSunglasses.png)| Je kunt vaker `if` na elkaar zetten
 :-------------:|:----------------------------------------: 
 
-![Bowtie](EmojiBowtie.png) | Voor een tweede knop heb je een tweede weerstand van tienduizend Ohm nodig
+![](EmojiBowtie.png) | Voor een tweede knop heb je een tweede weerstand van tienduizend Ohm nodig
 :-------------:|:----------------------------------------: 
 
-![Eindopdracht](2_knop_if_else_eindopdracht.png)
+![Eindopdracht](3_knop_if_else_eindopdracht.png)
