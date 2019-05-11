@@ -1,10 +1,10 @@
-# Les 1b: Blink Blink Blink
+# Les 2: Blink Blink Blink
 
 Deze les heet 'Blink Blink Blink', omdat het de les Blink is, maar dan met drie lampjes.
 
-## Blink 
+## 2.1: Blink Blink Blink: Blink 
 
-![Blink](1b_BlinkBlinkBlink_blink.png)
+![Blink](02_blink_blink_blink_blink.png)
 
 Dit is de code van Blink op een andere manier:
 
@@ -27,19 +27,19 @@ void loop()
 
 `pin_led` wordt een variabele genoemd: een stukje computergeheugen met een naam.
 
-![Computer](EmojiComputer.png) | ![Smiley](EmojiSmiley.png)
-:-------------:|:----------------------------------------: 
+![](EmojiComputer.png) | ![Smiley](EmojiSmiley.png)
+:-----------------------:|:----------------------------------------: 
 `const int pin_led = 13;`|'Lieve computer, onthoud een heel getal met de naam `pin_led` met beginwaarde 13.'
 
-## Opdracht 1
+## 2.2: Blink Blink Blink: Opdracht 1
 
 Sluit de LED aan op pin 12 en verander de code zodat deze gaat knipperen.
 
 \pagebreak
 
-## Oplossing 1
+## 2.3: Blink Blink Blink: Oplossing 1
 
-![Blink met LEDje op 12](1b_BlinkBlinkBlink_blink_op_12.png)
+![Blink met LEDje op 12](02_blink_blink_blink_blink_op_12.png)
 
 ```c++
 const int pin_led = 12;
@@ -58,14 +58,18 @@ void loop()
 }
 ```
 
-## Opdracht 2
+## 2.4: Blink Blink Blink: Opdracht 2
 
-Maak zelf een nieuwe variabele met de naam `wachttijd`. `wachttijd` is een heel getal met beginwaarde 1000.
+Maak zelf een nieuwe variabele met de naam `wachttijd`. 
+`wachttijd` is een heel getal met beginwaarde 1000.
 Gebruik `wachttijd` in de regels met `delay`.
+
+![](EmojiSunglasses.png) | Slim! Als je `wachttijd` leest, weet je waar het voor is. Bij `1000` weet je dat niet
+:-------------:|:----------------------------------------: 
 
 \pagebreak
 
-## Oplossing 2
+## 2.5: Blink Blink Blink: Oplossing 2
 
 ```c++
 const int pin_led = 12;
@@ -85,19 +89,19 @@ void loop()
 }
 ```
 
-![Sunglasses](EmojiSunglasses.png) | Programmeurs gebruiken veel variabelen, omdat de code dan beter te snappen is.
+![](EmojiSunglasses.png) | Programmeurs gebruiken veel variabelen, omdat de code dan beter te snappen is.
 :-------------:|:----------------------------------------: 
 
-## Blink Blink Blink aansluiten
+## 2.6: Blink Blink Blink: Blink Blink Blink aansluiten
 
 Nu is het tijd 'Blink Blink Blink' aan te sluiten:
 
-![BlinkBlinkBlink](1b_BlinkBlinkBlink.png)
+![BlinkBlinkBlink](02_blink_blink_blink.png)
 
  * Haal het USB snoer uit de computer, zodat de Arduino geen spanning meer heeft
  * Sluit de onderdelen aan zoals op de tekening
 
-## Opdracht 3
+## 2.7: Blink Blink Blink: Opdracht 3
 
 Sluit 'Blink Blink Blink' aan. Hernoem de variable `pin_led` naar `pin_led_1`
 en zorg dat 'ie de juiste beginwaarde heeft.
@@ -124,23 +128,23 @@ void loop()
 }
 ```
 
-## Opdracht 4
+## 2.8: Blink Blink Blink: Opdracht 4
 
 Maak een nieuwe variable `pin_led_2`. 
 Laat dan eerst het eerste LEDje aan en uit gaan, laat dan het tweede LEDje aan en uit gaan.
 
-![Sunglasses](EmojiSunglasses.png) | De schrijfwijze `pin_led_2` wordt 'snake case' genoemd: 'snake' is Engels voor slang
+![](EmojiSunglasses.png) | De schrijfwijze `pin_led_2` wordt 'snake case' genoemd: 'snake' is Engels voor slang
 :-------------:|:----------------------------------------: 
 
-![Bowtie](EmojiBowtie.png) | Zou je schijven `pinLed2`, dan wordt dat 'camel case' genoemd: 'camel' is Engels voor kameel
+![](EmojiBowtie.png) | Zou je schijven `pinLed2`, dan wordt dat 'camel case' genoemd: 'camel' is Engels voor kameel
 :-------------:|:----------------------------------------: 
 
-![Computer](EmojiComputer.png) | Mij maakt het niet uit welke je kiest
+![](EmojiComputer.png) | Mij maakt het niet uit welke je kiest
 :-------------:|:----------------------------------------: 
 
 \pagebreak
 
-## Oplossing 4
+## 2.9: Blink Blink Blink: Oplossing 4
 
 ```c++
 const int pin_led_1 = 11;
@@ -166,13 +170,19 @@ void loop()
 }
 ```
 
-## Opdracht 5
+## 2.10: Blink Blink Blink: Opdracht 5
 
 Maak een derde variabele `pin_led_3`. Laat nu steeds alle lampjes tegelijk knipperen: allemaal aan, dan allemaal uit.
 
+![](EmojiSunglasses.png) | Dit is best veel typewerk! Later leer je hoe dit slimmer kan
+:-------------:|:----------------------------------------: 
+
+![](EmojiBowtie.png) | Klopt! Met arrays kun je meerdere getallen in een variabele opslaan
+:-------------:|:----------------------------------------: 
+
 \pagebreak
 
-## Oplossing 5
+## 2.11: Blink Blink Blink: Oplossing 5
 
 ```c++
 const int pin_led_1 = 11;
@@ -199,7 +209,7 @@ void loop()
 }
 ```
 
-## Eindopdracht
+## 2.12: Blink Blink Blink: Eindopdracht
 
 Laat de lampjes nu in een 'Knight Rider patroon' gaan: 1-2-3-2. Er moet altijd precies een lampje branden.
 
