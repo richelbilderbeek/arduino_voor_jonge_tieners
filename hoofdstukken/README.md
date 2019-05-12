@@ -13,7 +13,7 @@ De losse hoofdstukken van de boeken.
 
 ## 2. LEDs
 
- * [Les 5: Blink 6](05_blink_6/README.md) 
+ * [Les 5: Blink 4](05_blink_4/README.md) 
  * [Les 6: Knop kiest LED](06_knop_kiest/README.md)
  * [Les 7: Potmeter kiest LED](07_potmeter_kiest/README.md)
  * [Les 8: LDR kiest LED](08_ldr_kiest/README.md)
