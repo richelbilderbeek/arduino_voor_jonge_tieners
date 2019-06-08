@@ -38,5 +38,6 @@ script:
   #- ./maak_boek_6_theremin
   #- ./maak_boek_neopixel
   # Check dead links
+  - cd ..
   - rm .travis.yml
-  - ./check_dead_links
+  - ./scripts/check_dead_links

@@ -19,3 +19,8 @@ Cursus 'Arduino voor jonge tieners'.
 (C) Richèl Bilderbeek en alle docenten en alle leerlingen
 ```
 
+## Test
+
+ * [dode link](dode_link.md)
+ * [dode link](https://github.com/richelbilderbeek/super_dead_link)
+
