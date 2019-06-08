@@ -27,14 +27,12 @@ script:
   # Compile twice to fix possible references
   #- texliveonfly --arguments="--shell-escape" ./main.tex
   # Check dead links
-  - cd ..
   - rm .travis.yml
   - ./scripts/check_dead_links
   # Create books
   - sudo apt-get install coreutils pandoc poppler-utils fragmaster texlive-fonts-recommended bookletimposer
-  - cd scripts
-  - ./maak_boek_voorpaginas
-  - ./maak_boek_1_led_en_knop
+  - cd scripts; ./maak_boek_voorpaginas
+  - cd scripts; ./maak_boek_1_led_en_knop
   #- ./maak_boek_2_sensor
   #- ./maak_boek_3_actuatoren_laag
   #- ./maak_boek_4_actuatoren_hoog
