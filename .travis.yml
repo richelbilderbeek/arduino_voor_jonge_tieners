@@ -23,9 +23,13 @@ before_script:
 
 script:
   # texliveonfly will download packages automatically, running pdflatex by default. Change compiler with e.g. --compiler=lualatex
-  - texliveonfly --arguments="--shell-escape" ./main.tex
+  #- texliveonfly --arguments="--shell-escape" ./main.tex
   # Compile twice to fix possible references
-  - texliveonfly --arguments="--shell-escape" ./main.tex
+  #- texliveonfly --arguments="--shell-escape" ./main.tex
+  # Check dead links
+  - cd ..
+  - rm .travis.yml
+  - ./scripts/check_dead_links
   # Create books
   - sudo apt-get install coreutils pandoc poppler-utils fragmaster texlive-fonts-recommended bookletimposer
   - cd scripts
@@ -37,7 +41,3 @@ script:
   #- ./maak_boek_5_muziek
   #- ./maak_boek_6_theremin
   #- ./maak_boek_neopixel
-  # Check dead links
-  - cd ..
-  - rm .travis.yml
-  - ./scripts/check_dead_links
