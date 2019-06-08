@@ -1,27 +1,32 @@
 language: generic
 dist: xenial
 
-# Dependency of the minted package
-before_install:
- - sudo apt-get install python-pygments
-
-install:
- - source ./texlive/texlive_install.sh
 cache:
   directories:
     - /tmp/texlive
     - $HOME/.texlive
 
+# Dependency of the minted package
+before_install:
+  - sudo apt-get install python-pygments
+
+install:
+  - source ./texlive/texlive_install.sh
+  # Check dead links
+  - sudo apt-get install -qq npm
+  - npm config set strict-ssl false
+  - sudo npm install -g markdown-link-check
+
 # Change working directory so including files will work
-before_script: cd $TRAVIS_BUILD_DIR
+before_script: 
+  - cd $TRAVIS_BUILD_DIR
 
 script:
   # texliveonfly will download packages automatically, running pdflatex by default. Change compiler with e.g. --compiler=lualatex
   - texliveonfly --arguments="--shell-escape" ./main.tex
   # Compile twice to fix possible references
   - texliveonfly --arguments="--shell-escape" ./main.tex
-
-script: 
+  # Create books
   - sudo apt-get install coreutils pandoc poppler-utils fragmaster texlive-fonts-recommended bookletimposer
   - cd scripts
   - ./maak_boek_voorpaginas
@@ -32,3 +37,6 @@ script:
   #- ./maak_boek_5_muziek
   #- ./maak_boek_6_theremin
   #- ./maak_boek_neopixel
+  # Check dead links
+  - rm .travis.yml
+  - ./check_dead_links
