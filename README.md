@@ -1,6 +1,6 @@
 # Arduino voor jonge tieners
 
-Branch|[![Travis CI logo](TravisCI.png)](https://travis-ci.org)
+Branch|[![Travis CI logo]([pics/TravisCI.png)](https://travis-ci.org)
 ---|---
 `master`|[![Build Status](https://travis-ci.org/richelbilderbeek/arduino_voor_jonge_tieners.svg?branch=master)](https://travis-ci.org/richelbilderbeek/arduino_voor_jonge_tieners)
 
@@ -13,14 +13,8 @@ Cursus 'Arduino voor jonge tieners'.
 
 ## Licensie
 
-![CC-BY-NC-SA](CC-BY-NC-SA.png)
+![CC-BY-NC-SA](pics/CC-BY-NC-SA.png)
 
 ```
 (C) Richèl Bilderbeek en alle docenten en alle leerlingen
 ```
-
-## Test
-
- * [dode link](dode_link.md)
- * [dode link](https://github.com/richelbilderbeek/super_dead_link)
-
