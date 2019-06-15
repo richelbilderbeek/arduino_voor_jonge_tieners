@@ -1,10 +1,20 @@
-# Les 7: Potmeter
+# Les 7: Potmeter en joystick
 
-In deze les gebruiken we een potmeter en een functie die een waarde teruggeeft.
+In deze les gebruiken we een potmeter, een joystick en een functie die een waarde teruggeeft.
 
 ## 7.1 Potmeter: aansluiten, opdracht
 
+ * Sluit een potmeter aan. Leg de volgende verbindingen:
+
+Potmeter         | Arduino
+-----------------|--------
+Linker pootje    | 5V
+Middelste pootje | A0
+Rechter pootje   | GND
+
 ## 7.2 Potmeter: aansluiten, oplossing
+
+[schema hier]
 
 ## 7.3 Potmeter: opstarten, opdracht
 
