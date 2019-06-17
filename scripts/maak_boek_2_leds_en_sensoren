@@ -15,9 +15,9 @@ fi
 
 cp ../hoofdstukken/Voorwoord/*.* $build_folder        ; mv $build_folder/README.md $build_folder/README_00.md
 cp ../hoofdstukken/05_blink_4/*.* $build_folder       ; mv $build_folder/README.md $build_folder/README_01.md
-cp ../hoofdstukken/06_knop_kiest/*.* $build_folder    ; mv $build_folder/README.md $build_folder/README_02.md
-cp ../hoofdstukken/07_potmeter_kiest/*.* $build_folder; mv $build_folder/README.md $build_folder/README_03.md
-cp ../hoofdstukken/08_ldr_kiest/*.* $build_folder     ; mv $build_folder/README.md $build_folder/README_04.md
+cp ../hoofdstukken/06_oplaadknop/*.* $build_folder    ; mv $build_folder/README.md $build_folder/README_02.md
+cp ../hoofdstukken/07_potmeter_en_joystick/*.* $build_folder; mv $build_folder/README.md $build_folder/README_03.md
+cp ../hoofdstukken/08_ldr/*.* $build_folder     ; mv $build_folder/README.md $build_folder/README_04.md
 
 cd $build_folder
 
