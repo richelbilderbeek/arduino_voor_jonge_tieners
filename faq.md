@@ -15,7 +15,7 @@ Jazeker:
 
 De boeken hebben allemaal een [CC-BY-NC-SA](https://nl.wikipedia.org/wiki/Creative_Commons-licenties) licensie:
 
-![De licensie van dit boek](CC-BY-NC-SA.png)
+![De licensie van dit boek](pics/CC-BY-NC-SA.png)
 
 Letters|Betekenis|Vertaling
 ---|---|---

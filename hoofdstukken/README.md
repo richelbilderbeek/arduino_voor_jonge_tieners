@@ -117,8 +117,7 @@ De losse hoofdstukken van de boeken.
 
 ## Leskaarten
 
- * [Leskaart 1](Leskaarten/Leskaart1.pdf)
- * [Leskaart 2](Leskaarten/Leskaart2.pdf)
+ * [Leskaart 1](leskaarten/leskaart_1.pdf)
 
 ## Andere plekken
 
