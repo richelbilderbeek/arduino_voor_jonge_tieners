@@ -319,3 +319,6 @@ void loop()
 Maak het liedje Vader Jacob af. Zie figuur 'Vader Jacob bladmuziek' hoe de laatste noten moeten.
 
 ![Vader Jacob bladmuziek](17_compleet.png)
+
+![Alle frequenties](17_frequenties.png)
+
