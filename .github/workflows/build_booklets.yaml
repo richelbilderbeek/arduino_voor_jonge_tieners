@@ -20,6 +20,9 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v1
 
+      - name: Install pdflatex
+        run: sudo apt-get install pdflatex
+
       - name: Install pdftk, for splitting PDFs
         run: sudo apt-get install pdftk
 
