@@ -1,6 +1,6 @@
 # `boeken`
 
-Titel                     |A4               |A5
+Titel                     |A4               |A5                 
 --------------------------|-----------------|-------------------
 1. LED en knop            |[PDF](boek_1.pdf)|[PDF](boekje_1.pdf)
 2. LEDs                   |[PDF](boek_2.pdf)|[PDF](boekje_2.pdf)
