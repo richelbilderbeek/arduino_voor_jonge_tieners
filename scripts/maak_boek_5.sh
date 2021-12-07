@@ -36,7 +36,7 @@ pandoc README.md -o boek.pdf --toc --toc-depth=1 --highlight-style=tango -V geom
 cp boek.pdf ../../boeken/boek_5_zonder_voorpagina.pdf
 
 cd ../../boeken
-pdfunite VoorpaginaMuziek.pdf boek_5_zonder_voorpagina.pdf boek_5.pdf
+pdfunite voorpagina_5.pdf boek_5_zonder_voorpagina.pdf boek_5.pdf
 
 # Make booklet
 bookletimposer -a boek_5.pdf -o boekje_5.pdf
