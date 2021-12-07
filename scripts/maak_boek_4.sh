@@ -16,7 +16,7 @@ fi
 cp ../hoofdstukken/Voorwoord/*.* $build_folder;         mv $build_folder/README.md $build_folder/README_00.md
 cp ../hoofdstukken/13_servo_serial/*.* $build_folder;   mv $build_folder/README.md $build_folder/README_01.md
 cp ../hoofdstukken/14_servo_potmeter/*.* $build_folder; mv $build_folder/README.md $build_folder/README_02.md
-cp ../hoofdstukken/15_FSR_met_servo/*.* $build_folder;  mv $build_folder/README.md $build_folder/README_03.md
+cp ../hoofdstukken/15_servo_fsr/*.* $build_folder;  mv $build_folder/README.md $build_folder/README_03.md
 cp ../hoofdstukken/16_servos/*.* $build_folder;         mv $build_folder/README.md $build_folder/README_04.md
 
 cd $build_folder

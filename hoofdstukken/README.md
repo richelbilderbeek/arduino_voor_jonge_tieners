@@ -33,7 +33,7 @@ De losse hoofdstukken van de boeken.
 
  * [Les 13: Servo met seriele monitor](13_servo_serial/README.md)
  * [Les 14: Servo met potmeter](14_servo_potmeter/README.md)
- * [Les 15: FSR met servo](15_FSR_met_servo/README.md)
+ * [Les 15: FSR met servo](15_servo_fsr/README.md)
  * [Les 16: Servo's](16_servos/README.md)
 
 ## 5. Muziek
