@@ -13,10 +13,11 @@ if [ ! -d $build_folder ]; then
   exit 1
 fi
 
-cp ../hoofdstukken/Voorwoord/*.* $build_folder                                    ; mv $build_folder/README.md $build_folder/README_00.md
-cp ../hoofdstukken/5_dc_motor_met_transistor/*.* $build_folder                    ; mv $build_folder/README.md $build_folder/README_01.md
-cp ../hoofdstukken/7_dc_motor_met_relais/*.* $build_folder                        ; mv $build_folder/README.md $build_folder/README_02.md
-cp ../hoofdstukken/8_infrarood_sensor_obstakel_ontwijkend_object/*.* $build_folder; mv $build_folder/README.md $build_folder/README_03.md
+cp ../hoofdstukken/Voorwoord/*.* $build_folder        ; mv $build_folder/README.md $build_folder/README_00.md
+cp ../hoofdstukken/05_blink_4/*.* $build_folder       ; mv $build_folder/README.md $build_folder/README_01.md
+cp ../hoofdstukken/06_oplaadknop/*.* $build_folder    ; mv $build_folder/README.md $build_folder/README_02.md
+cp ../hoofdstukken/07_potmeter_en_joystick/*.* $build_folder; mv $build_folder/README.md $build_folder/README_03.md
+cp ../hoofdstukken/08_ldr/*.* $build_folder     ; mv $build_folder/README.md $build_folder/README_04.md
 
 cd $build_folder
 
@@ -28,14 +29,13 @@ cat README_03.md >> README.md; echo " " >> README.md; echo "\pagebreak" >> READM
 # Thinner margin
 pandoc README.md -o boek.pdf --toc --toc-depth=1 --highlight-style=tango -V geometry:margin=0.5in
 
-cp boek.pdf ../../boeken/Boek_actuatoren_hoog_zonder_voorpagina.pdf
+cp boek.pdf ../../boeken/boek_2_zonder_voorpagina.pdf
 
 cd ../../boeken
-
-pdfunite VoorpaginaActuatorenHoog.pdf Boek_actuatoren_hoog_zonder_voorpagina.pdf Boek_actuatoren_hoog.pdf
+pdfunite voorpagina_2_leds.pdf boek_2_zonder_voorpagina.pdf boek_2.pdf
 
 # Make booklet
-bookletimposer -a Boek_actuatoren_hoog.pdf -o Boekje_actuatoren_hoog.pdf
+bookletimposer -a boek_2.pdf -o boekje_2.pdf
 
 # Cleanup
-rm Boek_actuatoren_hoog_zonder_voorpagina.pdf
+rm boek_2_zonder_voorpagina.pdf

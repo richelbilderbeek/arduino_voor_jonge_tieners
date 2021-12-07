@@ -14,10 +14,10 @@ if [ ! -d $build_folder ]; then
 fi
 
 cp ../hoofdstukken/Voorwoord/*.* $build_folder           ; mv $build_folder/README.md $build_folder/README_00.md
-cp ../hoofdstukken/3_servo_motor/*.* $build_folder       ; mv $build_folder/README.md $build_folder/README_01.md
-cp ../hoofdstukken/3_meer_servo_motoren/*.* $build_folder; mv $build_folder/README.md $build_folder/README_02.md
-cp ../hoofdstukken/4_FSR_met_servo/*.* $build_folder     ; mv $build_folder/README.md $build_folder/README_03.md
-cp ../hoofdstukken/6_muziek_tone/*.* $build_folder       ; mv $build_folder/README.md $build_folder/README_04.md
+cp ../hoofdstukken/01_blink/*.* $build_folder            ; mv $build_folder/README.md $build_folder/README_01.md
+cp ../hoofdstukken/02_blink_blink_blink/*.* $build_folder; mv $build_folder/README.md $build_folder/README_02.md
+cp ../hoofdstukken/03_knop_if_else/*.* $build_folder     ; mv $build_folder/README.md $build_folder/README_03.md
+cp ../hoofdstukken/04_knop_flip/*.* $build_folder        ; mv $build_folder/README.md $build_folder/README_04.md
 
 cd $build_folder
 
@@ -27,17 +27,20 @@ cat README_02.md >> README.md; echo " " >> README.md; echo "\pagebreak" >> READM
 cat README_03.md >> README.md; echo " " >> README.md; echo "\pagebreak" >> README.md; echo " " >> README.md
 cat README_04.md >> README.md; echo " " >> README.md; echo "\pagebreak" >> README.md; echo " " >> README.md
 
-# Thinner margin
+# Table of Content
+# Code has highlights following the tango color scheme
+# Thinner margin of 0.5 inch
+# Do not cut code blocks
 pandoc README.md -o boek.pdf --toc --toc-depth=1 --highlight-style=tango -V geometry:margin=0.5in
 
-cp boek.pdf ../../boeken/Boek_actuatoren_laag_zonder_voorpagina.pdf
+cp boek.pdf ../../boeken/boek_1_zonder_voorpagina.pdf
 
 cd ../../boeken
-
-pdfunite VoorpaginaActuatorenLaag.pdf Boek_actuatoren_laag_zonder_voorpagina.pdf Boek_actuatoren_laag.pdf
+pdfunite voorpagina_1_led.pdf boek_1_zonder_voorpagina.pdf boek_1.pdf
 
 # Make booklet
-bookletimposer -a Boek_actuatoren_laag.pdf -o Boekje_actuatoren_laag.pdf
+bookletimposer -a boek_1.pdf -o boekje_1.pdf
 
 # Cleanup
-rm Boek_actuatoren_laag_zonder_voorpagina.pdf
+rm boek_1_zonder_voorpagina.pdf
+

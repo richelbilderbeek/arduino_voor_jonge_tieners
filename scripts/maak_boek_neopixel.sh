@@ -27,14 +27,14 @@ cat README_01.md >> README.md; echo " " >> README.md; echo "\pagebreak" >> READM
 # Do not cut code blocks
 pandoc README.md -o boek.pdf --toc --toc-depth=1 --highlight-style=tango -V geometry:margin=0.5in
 
-cp boek.pdf ../../boeken/Boek_NeoPixel_zonder_voorpagina.pdf
+cp boek.pdf ../../boeken/boek_neopixel_zonder_voorpagina.pdf
 
 cd ../../boeken
-pdfunite VoorpaginaNeoPixel.pdf Boek_NeoPixel_zonder_voorpagina.pdf Boek_NeoPixel.pdf
+pdfunite VoorpaginaNeoPixel.pdf boek_neopixel_zonder_voorpagina.pdf boek_neopixel.pdf
 
 # Make booklet
-bookletimposer -a Boek_NeoPixel.pdf -o Boekje_NeoPixel.pdf
+bookletimposer -a boek_neopixel.pdf -o boekje_neopixel.pdf
 
 # Cleanup
-rm Boek_NeoPixel_zonder_voorpagina.pdf
+rm boek_neopixel_zonder_voorpagina.pdf
 

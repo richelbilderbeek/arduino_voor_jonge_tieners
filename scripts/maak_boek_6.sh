@@ -33,13 +33,13 @@ cat README_04.md >> README.md; echo " " >> README.md; echo "\pagebreak" >> READM
 # Do not cut code blocks
 pandoc README.md -o boek.pdf --toc --toc-depth=1 --highlight-style=tango -V geometry:margin=0.5in
 
-cp boek.pdf ../../boeken/Boek_6_theremin_zonder_voorpagina.pdf
+cp boek.pdf ../../boeken/boek_6_zonder_voorpagina.pdf
 
 cd ../../boeken
-pdfunite VoorpaginaTheremin.pdf Boek_6_theremin_zonder_voorpagina.pdf Boek_6_theremin.pdf
+pdfunite VoorpaginaTheremin.pdf boek_6_zonder_voorpagina.pdf boek_6.pdf
 
 # Make booklet
-bookletimposer -a Boek_6_theremin.pdf -o Boekje_6_theremin.pdf
+bookletimposer -a boek_6.pdf -o boekje_6.pdf
 
 # Cleanup
-rm Boek_6_theremin_zonder_voorpagina.pdf
+rm boek_6_zonder_voorpagina.pdf
