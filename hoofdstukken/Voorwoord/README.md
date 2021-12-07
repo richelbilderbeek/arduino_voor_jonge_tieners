@@ -1,3 +1,8 @@
+---
+documentclass: extarticle
+fontsize: 14pt
+---
+
 # Voorwoord
 
 Dit is een boek over Arduino, geschreven voor jonge tieners. 
