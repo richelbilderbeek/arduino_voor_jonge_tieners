@@ -16,12 +16,12 @@ fi
 cp ../hoofdstukken/voorpagina/*.* $build_folder
 cd $build_folder
 
-pandoc voorpagina_1_led.md -o ../../boeken/voorpagina_1_led.pdf
-pandoc voorpagina_2_leds.md -o ../../boeken/voorpagina_2_leds.pdf
-#pandoc VoorpaginaActuatorenLaag.md -o ../../boeken/VoorpaginaActuatorenLaag.pdf
-#pandoc VoorpaginaActuatorenHoog.md -o ../../boeken/VoorpaginaActuatorenHoog.pdf
-#pandoc VoorpaginaMuziek.md -o ../../boeken/VoorpaginaMuziek.pdf
-#pandoc VoorpaginaNeoPixel.md -o ../../boeken/VoorpaginaNeoPixel.pdf
-#pandoc VoorpaginaTheremin.md -o ../../boeken/VoorpaginaTheremin.pdf
+pandoc voorpagina_1.md -o ../../boeken/voorpagina_1.pdf
+pandoc voorpagina_2.md -o ../../boeken/voorpagina_2.pdf
+pandoc voorpagina_3.md -o ../../boeken/voorpagina_3.pdf
+pandoc voorpagina_4.md -o ../../boeken/voorpagina_4.pdf
+pandoc voorpagina_5.md -o ../../boeken/voorpagina_5.pdf
+pandoc voorpagina_6.md -o ../../boeken/voorpagina_6.pdf
+pandoc voorpagina_7.md -o ../../boeken/voorpagina_7.pdf
 
 

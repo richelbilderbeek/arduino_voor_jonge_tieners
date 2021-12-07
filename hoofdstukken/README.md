@@ -56,31 +56,31 @@ De losse hoofdstukken van de boeken.
 
 ### 7. Capacitieve sensoren
 
- * [Capacitieve sensor 1: een](CapacitieveSensor1/README.md)
- * [Capacitieve sensor 2: twee losse](CapacitieveSensor2/README.md)
- * [Capacitieve sensor 3: twee gekoppelde](CapacitieveSensor3/README.md)
- * Capacitieve sensor 4: drie gekoppelde voor Arduino Invaders
+ * [Les 25: Capacitieve sensor 1: een](CapacitieveSensor1/README.md)
+ * [Les 26: Capacitieve sensor 2: twee losse](CapacitieveSensor2/README.md)
+ * [Les 27: Capacitieve sensor 3: twee gekoppelde](CapacitieveSensor3/README.md)
+ * Les 28: Capacitieve sensor 4: drie gekoppelde voor Arduino Invaders
 
 ### 8. Leesbare output
 
- * [Zeven segmenten display](ZevenSegmentDisplay/README.md)
- * [LCD 1](LCD1/README.md)
- * [LCD 2](LCD2/README.md)
- * [LCD 3](LCD3/README.md)
+ * [Les 29: Zeven segmenten display](ZevenSegmentDisplay/README.md)
+ * [Les 30: LCD 1](LCD1/README.md)
+ * [Les 31: LCD 2](LCD2/README.md)
+ * [Les 32: LCD 3](LCD3/README.md)
 
 ### 9. Hi-tech
 
- * [RFID 1](RFID1/README.md)
- * [RFID 2](RFID2/README.md)
- * [ArduinoISP](ArduinoISP/README.md): bootloader branden met de Arduino als ISP
- * [Bare-bone Arduino](BareBoneArduino/README.md): de Arduino zonder printplaat
+ * [Les 33: RFID 1](RFID1/README.md)
+ * [Les 34: RFID 2](RFID2/README.md)
+ * [Les 35: ArduinoISP](ArduinoISP/README.md): bootloader branden met de Arduino als ISP
+ * [Les 36: Bare-bone Arduino](BareBoneArduino/README.md): de Arduino zonder printplaat
 
 ### 10. Veel output
 
- * Schuifregister 1: een schuif register
- * Schuifregister 2: twee schuif registers
- * [NeoPixels 1: blink op een LEDje](NeoPixel1/README.md)
- * [NeoPixels 2: ?regenboog op alle LEDjes](NeoPixel2/README.md)
+ * Les 37: Schuifregister 1: een schuif register
+ * Les 38: Schuifregister 2: twee schuif registers
+ * [Les 39: NeoPixels 1: blink op een LEDje](NeoPixel1/README.md)
+ * [Les 40: NeoPixels 2: ?regenboog op alle LEDjes](NeoPixel2/README.md)
 
 ### Actuator, hoger vermogen
 

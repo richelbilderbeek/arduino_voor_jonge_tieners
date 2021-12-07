@@ -34,7 +34,7 @@ cp boek.pdf ../../boeken/boek_3_zonder_voorpagina.pdf
 
 cd ../../boeken
 
-pdfunite VoorpaginaActuatorenLaag.pdf boek_3_zonder_voorpagina.pdf boek_3.pdf
+pdfunite voorpagina_3.pdf boek_3_zonder_voorpagina.pdf boek_3.pdf
 
 # Make booklet
 bookletimposer -a boek_3.pdf -o boekje_3.pdf
